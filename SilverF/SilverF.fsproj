@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6a91c824-c5da-4cd9-9e01-bbe6e2154614}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>SilverF</RootNamespace>
+    <AssemblyName>SilverF</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Name>SilverF</Name>
+    <OtherFlags>--standalone --noframework</OtherFlags>
+    <Optimize>false</Optimize>
+    <SilverlightApplication>true</SilverlightApplication>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>SilverF.xap</XapFilename>
+    <SilverlightManifestTemplate>AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>SilverF.App</SilverlightAppEntry>
+    <TestPageFileName>TestPage.html</TestPageFileName>
+    <CreateTestPage>true</CreateTestPage>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>3</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>3</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="NoXamlFSharpControl.fs" />
+    <EmbeddedResource Include="SomeXamlView.xaml" />
+    <Compile Include="AgUtil.fs" />
+    <Compile Include="App.fs" />
+    <Content Include="AppManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+      <Name>mscorlib</Name>
+      <AssemblyName>mscorlib.dll</AssemblyName>
+      <HintPath>..\..\..\Program Files\Microsoft SDKs\Silverlight\v2.0\Reference Assemblies\mscorlib.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+      <Name>System</Name>
+      <AssemblyName>system.dll</AssemblyName>
+      <HintPath>..\..\..\Program Files\Microsoft SDKs\Silverlight\v2.0\Reference Assemblies\system.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Core, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+      <Name>System.Core</Name>
+      <AssemblyName>System.Core.dll</AssemblyName>
+      <HintPath>..\..\..\Program Files\Microsoft SDKs\Silverlight\v2.0\Reference Assemblies\System.Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+      <Name>System.Net</Name>
+      <AssemblyName>System.Net.dll</AssemblyName>
+      <HintPath>..\..\..\Program Files\Microsoft SDKs\Silverlight\v2.0\Reference Assemblies\System.Net.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+      <Name>System.Runtime.Serialization</Name>
+      <AssemblyName>System.Runtime.Serialization.dll</AssemblyName>
+      <HintPath>..\..\..\Program Files\Microsoft SDKs\Silverlight\v2.0\Reference Assemblies\System.Runtime.Serialization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel.Web, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+      <Name>System.ServiceModel.Web</Name>
+      <AssemblyName>System.ServiceModel.Web.dll</AssemblyName>
+      <HintPath>..\..\..\Program Files\Microsoft SDKs\Silverlight\v2.0\Reference Assemblies\System.ServiceModel.Web.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Windows, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+      <Name>System.Windows</Name>
+      <AssemblyName>System.Windows.dll</AssemblyName>
+      <HintPath>..\..\..\Program Files\Microsoft SDKs\Silverlight\v2.0\Reference Assemblies\System.Windows.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Windows.Browser, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+      <Name>System.Windows.Browser</Name>
+      <AssemblyName>System.Windows.Browser.dll</AssemblyName>
+      <HintPath>..\..\..\Program Files\Microsoft SDKs\Silverlight\v2.0\Reference Assemblies\System.Windows.Browser.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+      <Name>System.Xml</Name>
+      <AssemblyName>System.Xml.dll</AssemblyName>
+      <HintPath>..\..\..\Program Files\Microsoft SDKs\Silverlight\v2.0\Reference Assemblies\System.Xml.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\FSharp\1.0\Microsoft.FSharp.Targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight\v2.0\Microsoft.Silverlight.Common.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+	     Other similar extension points exist, see Microsoft.Common.targets.
+	<Target Name="BeforeBuild">
+	</Target>
+	<Target Name="AfterBuild">
+	</Target>
+	-->
+</Project>
